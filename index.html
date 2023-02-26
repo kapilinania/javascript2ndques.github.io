@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = ['a','b','c','d','e','a','b','c','e','a','d','c','b','a']
+        //output = b=3,a=4, , c=3, d=2, e=2
+        function datacount(arr){
+            let counter = {};
+            arr.forEach((val) => {
+                if(!counter[val]){
+                    counter[val]=1
+                }
+                else{
+                    counter[val]= counter[val]+1
+                }
+                
+            })
+            return counter
+
+        }
+        const result = datacount(data);
+        console.log(result)
+       
+    </script>
+</body>
+</html>
